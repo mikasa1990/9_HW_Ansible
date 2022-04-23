@@ -8,5 +8,5 @@
 
 - name: copy file to webapp
   ansible.builtin.copy:
-    src: /opt/51.250.86.36/opt/boxfuse-sample-java-war-hello/target/hello-1.0.war
+    src: /opt/51.250.83.23/opt/boxfuse-sample-java-war-hello/target/hello-1.0.war
     dest: /var/lib/tomcat9/webapps/
