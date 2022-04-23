@@ -1,0 +1,19 @@
+---
+# tasks file for common
+- name: git clone
+  git:
+    repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+    dest: /opt/boxfuse-sample-java-war-hello
+    clone: yes
+    update: yes
+
+- name: mvn package
+  shell: mvn package
+  args:
+    chdir: /opt/boxfuse-sample-java-war-hello
+
+- name: copy file from first host to second host
+  synchronize:
+    src: /opt/boxfuse-sample-java-war-hello
+    dest: /opt/boxfuse-sample-java-war-hello
+  delegate_to: 51.250.81.172

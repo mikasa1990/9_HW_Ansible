@@ -1,0 +1,16 @@
+---
+- name: provision
+  hosts: prov
+  become: yes
+
+  roles:
+    - common
+    - build
+
+- name: product
+  hosts: prod
+  become: yes
+
+  roles:
+    - common
+    - running
