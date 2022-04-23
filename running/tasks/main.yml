@@ -1,6 +1,12 @@
 ---
 # tasks file for common
+- name: install tomcat9
+  apt:
+    name: tomcat9
+    state: present
+    update_cache: yes
+
 - name: copy file to webapp
   ansible.builtin.copy:
-    src: /opt/boxfuse-sample-java-war-hello/target/hello-1.0.war
+    src: /opt/51.250.86.36/opt/boxfuse-sample-java-war-hello/target/hello-1.0.war
     dest: /var/lib/tomcat9/webapps/
