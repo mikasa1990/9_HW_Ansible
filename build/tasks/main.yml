@@ -16,4 +16,4 @@
   synchronize:
     src: /opt/boxfuse-sample-java-war-hello
     dest: /opt/boxfuse-sample-java-war-hello
-  delegate_to: 51.250.81.172
+  delegate_to: prod
