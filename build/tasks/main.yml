@@ -13,6 +13,6 @@
     chdir: /opt/boxfuse-sample-java-war-hello
 
 - name: copy file from remote host to local
-   fetch:
-     src: /opt/boxfuse-sample-java-war-hello/target/hello-1.0.war
-     dest: /opt
+  fetch:
+    src: /opt/boxfuse-sample-java-war-hello/target/hello-1.0.war
+    dest: /opt
